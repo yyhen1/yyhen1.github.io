@@ -59,8 +59,8 @@
         $("body").click(function(e) {
             //var key=getRandomIntInclusive(1,5);
             const a = new Array("Ciallo～(∠・ω< )⌒★", "0721","请收下我的（）（）！","杂鱼~❤ 杂鱼~❤","苟↓修↑金√ん→→");
-            const $i = $("<span/>").text(a[a_idx]);
             a_idx = (a_idx + 1) % a.length;// 循环遍历 a中的元素
+            const $i = $("<span/>").text(a[a_idx]);
             const x = e.pageX,
                 y = e.pageY;
             $i.css({
