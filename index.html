@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ciallo～(∠・ω<)⌒★</title>
+    <title>YoZoSoFT</title>
     <link rel="shortcut icon" href="favicon.ico" />
 </head>
 <style>
@@ -20,22 +20,22 @@
 </style>
 <body>
     <div>
-        <marquee behavior="scroll" direction="left" scrollamount="30"><font color="red" size="15px">Ciallo～(∠・ω< )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="15"><font color="aqua" size="11px">Ciallo～(∠・ω< )⌒☆</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="25"><font>Ciallo～(∠・ω< )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="12"><font color="coral" size="10px">Ciallo～(∠・ω< )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="28"><font color="red">Ciallo～(∠・ω< )⌒★</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="30"><font color="red" size="15px">Ciallo～(∠・ω< )⌒★ </font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="15"><font color="aqua" size="11px">0721</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="25"><font>请收下我的（）（）！</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="12"><font color="coral" size="10px">杂鱼~❤ 杂鱼~❤</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="28"><font color="red"></font>苟↓修↑金√ん→→</marquee>
         <marquee behavior="scroll" direction="left" scrollamount="20"><font color="greenyellow" size="13px">Ciallo～(∠・ω< )⌒☆</font></marquee>
         <marquee behavior="scroll" direction="left" scrollamount="10"><font size="16px">Ciallo～(∠・ω< )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="15"><font color="pink" size="20px">Ciallo～(∠・ω< )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="11"><font color="aqua" size="6px">Ciallo～(∠・ω< )⌒☆</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="28"><font color="red">Ciallo～(∠・ω< )⌒☆</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="8"><font color="greenyellow" size="10px">Ciallo～(∠・ω< )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="20"><font color="pink" size="9px">Ciallo～(∠・ω< )⌒★</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="15"><font color="pink" size="20px">0721</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="11"><font color="aqua" size="6px">请收下我的（）（）！</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="28"><font color="red">杂鱼~❤ 杂鱼~❤</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="8"><font color="greenyellow" size="10px">苟↓修↑金√ん→→</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="20"><font color="pink" size="9px">Ciallo～(∠・ω< )⌒☆</font></marquee>
         <marquee behavior="scroll" direction="left" scrollamount="13"><font color="green" size="5px">Ciallo～(∠・ω< )⌒☆</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="17"><font color="blue" size="5px">Ciallo～(∠・ω< )⌒☆</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="17"><font color="blue" size="5px">苟↓修↑金√ん→→</font></marquee>
         <marquee behavior="scroll" direction="left" scrollamount="16"><font color="yellow" size="7px">Ciallo～(∠・ω< )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="11"><font color="red" size="5px">Ciallo～(∠・ω< )⌒★</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="11"><font color="red" size="5px">杂鱼~❤ 杂鱼~❤</font></marquee>
         <marquee behavior="scroll" direction="left" scrollamount="10"><font color="orange" size="8px">Ciallo～(∠・ω< )⌒☆</font></marquee>
         <marquee behavior="scroll" direction="left" scrollamount="20"><font color="gray" size="9px">Ciallo～(∠・ω< )⌒★</font></marquee>
     </div>
@@ -50,14 +50,17 @@
 
     let ac = new AudioContext();
     window.onload = function() {
+    //   让他慢点加载
+        thread.sleep(1000);
         load_sound('ciallo.aac');
         console.log("播放成功");
     }
     $(function (){
         $("body").click(function(e) {
-            const a = new Array("Ciallo～(∠・ω< )⌒★", "Ciallo～(∠・ω< )⌒☆");
+            //var key=getRandomIntInclusive(1,5);
+            const a = new Array("Ciallo～(∠・ω< )⌒★", "0721","请收下我的（）（）！","杂鱼~❤ 杂鱼~❤","苟↓修↑金√ん→→");
             const $i = $("<span/>").text(a[a_idx]);
-            a_idx = (a_idx + 1) % a.length;
+            a_idx = (a_idx + 1) % a.length;// 循环遍历 a中的元素
             const x = e.pageX,
                 y = e.pageY;
             $i.css({
@@ -69,7 +72,22 @@
                 "color": color16()
             });
             $("body").append($i);
-            load_sound('ciallo.aac');
+            if(a_idx==0){
+                load_sound('ciallo.aac');
+                console.log("ciallo");
+            }
+            else if(a_idx==1){
+                load_sound('0721.aac');
+                console.log("0721");
+            }
+            else if(a_idx==2){
+                load_sound('zhencao.aac');
+                console.log("zhencao");
+            }
+            else if(a_idx==3)
+            load_sound('zaku.aac');
+            else
+            load_sound('dogDevelopGolden.aac');
             $i.animate({
                     "top": y - 180,
                     "opacity": 0
@@ -79,8 +97,11 @@
                     $i.remove();
                 });
         });
-    })
 
+    })
+    function getRandomIntInclusive(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }   
     function color16(){
         const r = Math.floor(Math.random()*256);
         const g = Math.floor(Math.random()*256);
